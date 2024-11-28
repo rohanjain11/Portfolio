@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohan Jain Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        console.log("EmailJS library loaded");
+        emailjs.init("01boPfvKNURmfLMXr"); // Replace with your actual User Token
+        console.log("EmailJS initialized");
+    </script>
+
+</head>
+<body>
+    <header class="landing-section">
+        <div class="landing-content">
+            <h1>Rohan Jain</h1>
+            <p>Data Scientist | Machine Learning Enthusiast | Analytics Expert</p>
+            <nav class="navbar">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+
+
+
+
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-image-wrapper">
+                    <img src="pictures\1658847914852.jpg" alt="Rohan Jain" class="about-image">
+                </div>
+                <div class="about-text">
+                    <p>
+                        Hello! I'm <strong>Rohan Jain</strong>, a Data Scientist with a strong foundation in technology. I started as a web developer, building responsive websites. Over time, my fascination with data grew, leading me into the world of data science and machine learning.
+                    </p>
+                    <p>
+                        Today, I specialize in extracting insights from data to solve complex problems, combining creativity with analytical thinking. I’m passionate about turning data into impactful decisions.
+                    </p>
+                    <a href="#contact" class="about-button">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <section id="education" class="education-section">
+        <h2>Education</h2>
+        <div class="timeline">
+            <div class="timeline-item hidden">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Master of Science in Data Science</h3>
+                    <span class="timeline-date">2024–2026</span>
+                    <p>University of Colorado, Boulder</p>
+                    <p>Relevant Coursework: Statistical Learning, Machine Learning, Data Visualization</p>
+                </div>
+            </div>
+            <div class="timeline-item hidden">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Bachelor of Engineering in Computer Engineering</h3>
+                    <span class="timeline-date">2020–2024</span>
+                    <p>Rajiv Gandhi Institute of Technology, Mumbai</p>
+                    <p>GPA: 9.23/10 | Relevant Coursework: AI, Machine Learning, Python Programming</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    
+    <section id="skills" class="skills-section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <!-- Skill 1 -->
+            <div class="skill-card">
+                <i class="fas fa-database skill-icon"></i>
+                <h3>SQL & Databases</h3>
+                <p>Expertise in SQL, NoSQL, PostgreSQL, and MongoDB for data management and analysis.</p>
+            </div>
+            <!-- Skill 2 -->
+            <div class="skill-card">
+                <i class="fas fa-chart-line skill-icon"></i>
+                <h3>Data Analysis</h3>
+                <p>Proficient in analyzing and visualizing data using Pandas, NumPy, and Excel.</p>
+            </div>
+            <!-- Skill 3 -->
+            <div class="skill-card">
+                <i class="fas fa-brain skill-icon"></i>
+                <h3>Machine Learning</h3>
+                <p>Experience in supervised and unsupervised learning with Scikit-Learn.</p>
+            </div>
+            <!-- Skill 4 -->
+            <div class="skill-card">
+                <i class="fas fa-network-wired skill-icon"></i>
+                <h3>Deep Learning</h3>
+                <p>Hands-on with TensorFlow, Keras, and PyTorch for neural network development.</p>
+            </div>
+            <!-- Skill 5 -->
+            <div class="skill-card">
+                <i class="fas fa-chart-pie skill-icon"></i>
+                <h3>Data Visualization</h3>
+                <p>Creating dashboards and visualizations using Tableau, Power BI, and Matplotlib.</p>
+            </div>
+            <!-- Skill 6 -->
+            <div class="skill-card">
+                <i class="fas fa-cloud skill-icon"></i>
+                <h3>Cloud Computing</h3>
+                <p>Experience with AWS, Google Cloud, and Azure for deploying data science solutions.</p>
+            </div>
+            <!-- Skill 7 -->
+            <div class="skill-card">
+                <i class="fas fa-code skill-icon"></i>
+                <h3>Programming</h3>
+                <p>Proficient in Python, R, and C++ for data science and software development.</p>
+            </div>
+            <!-- Skill 8 -->
+            <div class="skill-card">
+                <i class="fas fa-cogs skill-icon"></i>
+                <h3>Big Data</h3>
+                <p>Hands-on experience with Hadoop, Spark, and Snowflake for processing large datasets.</p>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+    <section id="projects" class="projects-section">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="logo.png" alt="Yoga Posture Detection" class="project-thumbnail" />
+                <div class="project-content">
+                    <h3>Yoga Posture Detection</h3>
+                    <p>
+                        A machine learning model to detect and correct yoga postures in real-time,
+                        leveraging <span class="highlight">TensorFlow</span>, <span class="highlight">Python</span>, and
+                        <span class="highlight">OpenCV</span> for accurate predictions.
+                    </p>
+                    <a href="https://github.com/rohanjain11/" class="project-link" target="_blank">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+                </div>
+            </div>
+    
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="logo.png" alt="Netflix Dashboard" class="project-thumbnail" />
+                <div class="project-content">
+                    <h3>Netflix Dashboard</h3>
+                    <p>
+                        An interactive Tableau dashboard showcasing trends, genres, and viewer insights,
+                        powered by <span class="highlight">SQL</span>, <span class="highlight">Tableau</span>, and
+                        <span class="highlight">Data Visualization</span>.
+                    </p>
+                    <a href="https://github.com/rohanjain11/" class="project-link" target="_blank">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+                </div>
+            </div>
+    
+            <!-- Project 3 -->
+            <div class="project-card">
+                <img src="logo.png" alt="AgriAdvisor" class="project-thumbnail" />
+                <div class="project-content">
+                    <h3>AgriAdvisor</h3>
+                    <p>
+                        An ML-based solution for recommending crops and predicting plant diseases to optimize productivity using
+                        <span class="highlight">Python</span>, <span class="highlight">Scikit-Learn</span>, and
+                        <span class="highlight">Machine Learning</span>.
+                    </p>
+                    <a href="https://github.com/rohanjain11/" class="project-link" target="_blank">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+                </div>
+            </div>
+    
+            <!-- Project 4 -->
+            <div class="project-card">
+                <img src="logo.png" alt="Denver Airport Dashboard" class="project-thumbnail" />
+                <div class="project-content">
+                    <h3>Denver Airport Dashboard</h3>
+                    <p>
+                        Designed an operational dashboard for Denver International Airport using
+                        <span class="highlight">Power BI</span>, <span class="highlight">Data Visualization</span>, and
+                        <span class="highlight">SQL</span> to streamline insights and enhance efficiency.
+                    </p>
+                    <a href="https://github.com/rohanjain11/" class="project-link" target="_blank">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <section class="contact-section" id="contact">
+        <h2>Contact Me</h2>
+        <p class="contact-description">
+            I'd love to hear from you! Whether it's a project, job opportunity, or just a chat, feel free to reach out.
+        </p>
+        <div class="contact-container">
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required />
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required />
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="contact-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    
+    
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-left">
+            <p class="footer-name">Rohan Jain</p>
+        </div>
+        <div class="footer-right">
+            <a href="https://github.com/rohanjain11" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+            <span class="divider"></span>
+            <a href="https://www.linkedin.com/in/rohan-jain11" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <span class="divider"></span>
+            <a href="mailto:jainrohanj@gmail.com" target="_blank" class="social-link"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+    
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="Scripts/education-timeline.js"></script>
+    <script src="Scripts/skills-animation.js"></script>
+    <script src="Scripts/about-me.js"></script>
+    <script src="Scripts/projects-animation.js"></script>
+    <script src="Scripts/contact-animation.js"></script>
+    <script src="Scripts/footer-aniamtion.js"></script>
+    
+    <script>
+        // Add event listener to the form
+        document.getElementById("contact-form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            console.log("Form submitted");
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            console.log("Form Data:", { name, email, message });
+
+            emailjs
+                .send(
+                    "service_lkz4bba", 
+                    "template_k4caxo4", 
+                    {
+                        name: name,
+                        email: email,
+                        message: message,
+                    }
+                )
+                .then(
+                    (response) => {
+                        console.log("Email sent successfully:", response);
+                        alert("Message sent successfully!");
+                        document.getElementById("contact-form").reset();
+                    },
+                    (error) => {
+                        console.error("Failed to send email:", error);
+                        alert("Failed to send message. Please try again later.");
+                    }
+                );
+        });
+    </script>
+
+</body>
+</html>
