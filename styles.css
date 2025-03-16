@@ -531,20 +531,6 @@ h2 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Projects Section */
 .projects-section {
     padding: 3rem 1.5rem;
@@ -552,32 +538,15 @@ h2 {
     text-align: center;
 }
 
-.projects-section h2 {
-    font-size: 2.5rem;
-    color: #00ffcc;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    position: relative;
-}
-
-.projects-section h2::after {
-    content: '';
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, #00ffcc, #0066ff);
-    display: block;
-    margin: 0.8rem auto 0;
-    border-radius: 2px;
-}
-
-/* Projects Grid */
+/* Projects Grid (Ensuring Proper Wrapping & Alignment) */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid for up to 3 items */
-    gap: 2rem; /* Space between cards */
-    max-width: 1100px; /* Restrict width */
+    grid-template-columns: repeat(3, minmax(300px, 1fr)); /* Ensures 3 items per row */
+    gap: 2rem; /* Ensures consistent spacing */
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 1rem;
+    align-items: stretch; /* Ensures equal height for all cards */
 }
 
 /* Project Card */
@@ -591,17 +560,25 @@ h2 {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    height: auto; /* Auto height for content adjustment */
+    height: 100%; /* Forces equal height for all project cards */
     padding: 1.5rem;
 }
 
-/* Project Thumbnail */
+/* Project Card Hover Effect */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Fixing Image Display */
 .project-thumbnail {
     width: 100%;
-    height: 200px; /* Fixed height for images */
+    height: 200px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
+    background-color: #222;
+    display: block; /* Ensures the image behaves consistently */
 }
 
 /* Project Content */
@@ -610,28 +587,26 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-grow: 1; /* Ensures content expands evenly */
 }
 
+/* Project Title */
 .project-content h3 {
     color: #00ffcc;
     font-size: 1.2rem;
     margin-bottom: 0.8rem;
 }
 
+/* Project Description */
 .project-content p {
     color: #f5f5f5;
     font-size: 0.9rem;
     margin-bottom: 1rem;
     line-height: 1.5;
-    text-align: center; /* Center the text */
+    text-align: center;
 }
 
-.project-content p .highlight {
-    color: #00ffcc; /* Highlight text */
-    font-weight: bold;
-}
-
-/* Project Link */
+/* GitHub Project Link Button */
 .project-link {
     display: inline-block;
     padding: 0.8rem 1.5rem;
@@ -643,25 +618,61 @@ h2 {
     font-weight: bold;
     text-decoration: none;
     transition: transform 0.3s, background-color 0.3s;
-    margin-top: 1rem; /* Ensure space above the button */
+    margin-top: auto; /* Ensures button stays at the bottom */
 }
 
+/* Button Hover Effect */
 .project-link:hover {
     background-color: #00cca3;
     transform: scale(1.05);
 }
-/* Project Card (Default State) */
+
+/* RESPONSIVE FIXES */
+
+/* For Medium Screens */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(300px, 1fr)); /* 2 columns */
+    }
+}
+
+/* For Small Screens */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Single column */
+    }
+}
+
+/* Fixing the Last Row Issue */
+.project-card:last-child {
+    align-self: start; /* Ensures it aligns properly */
+}
+
+/* Fixing Animation */
 .project-card {
     opacity: 0;
-    transform: translateY(20px); /* Start position for animation */
-    transition: all 0.8s ease-out; /* Smooth animation */
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
 }
 
 /* When 'show' Class is Added */
 .project-card.show {
     opacity: 1;
-    transform: translateY(0); /* Move to final position */
+    transform: translateY(0);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
